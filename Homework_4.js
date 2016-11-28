@@ -3,7 +3,11 @@
 // Первое задание
 
 function min (a, b) {
-  return Math.min (a, b);
+  if (a < b) {
+    return a;
+  } else { 
+      return b;
+    }
 }
 console.log(min(0, 10));
 console.log(min(0, -10));
@@ -13,21 +17,35 @@ console.log(min(0, -10));
 function countBs (string) {
   var count = 0;
   for (var i = 0; i <= string.length; i++) {
-    var c = string.charAt(i);
-    if (c == "B") {
-      count += 1;
+    if (string.charAt(i) == "B") {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countBs("Billy Bob"))
+
+function countChar (string, char) {
+  var count = 0;
+  for (var i = 0; i <= string.length; i++) {
+    if (string.charAt(i) == char) {
+      count++;
     }
   }
   return count;
 }
 
-function countChar (string, char) {
-  var count = 0;
-  for (var i = 0; i <= string.length; i++) {
-    var c = string.charAt(i);
-    if (c == char) {
-      count += 1;
-    }
+// Задание со звездочкой
+
+function isEven (N) {
+  if (N<0) {
+    N = -N; // Это исправление
   }
-  return count;
+  if (N === 0) {
+   return true;
+ } else if (N === 1) {
+    return false;
+  } else { 
+    return isEven (N-2);
+  }
 }
