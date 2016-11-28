@@ -3,11 +3,8 @@
 // Первое задание
 
 function min (a, b) {
-  if (a < b) {
-    return a;
-  } else { 
-      return b;
-    }
+  var c = (a < b) ? a : b ;
+  return c;
 }
 console.log(min(0, 10));
 console.log(min(0, -10));
