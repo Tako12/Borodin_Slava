@@ -23,7 +23,7 @@ function countBs (string) {
   }
   return count;
 }
-console.log(countBs("Billy Bob"))
+console.log(countBs("Billy Bob"));
 
 function countChar (string, char) {
   var count = 0;
@@ -34,18 +34,18 @@ function countChar (string, char) {
   }
   return count;
 }
-
+console.log(countChar("Billy Bob", "l"));
 // Задание со звездочкой
 
 function isEven (N) {
-	if (N<0) {
+  if (N < 0) {
     N = -N; // Это исправление
   }
-	if (N == 0 || N == 1) {
-		return  !N;
-	} else {
-	  return isEven (N-2);
- 		}
+  if (N == 0 || N == 1) {
+    return  !N;
+  } else {
+      return isEven (N - 2);
+    }
 }
 console.log(isEven(50));
 console.log(isEven(75));
