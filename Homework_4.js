@@ -3,8 +3,7 @@
 // Первое задание
 
 function min (a, b) {
-  var c = (a < b) ? a : b ;
-  return c;
+  return (a < b) ? a : b;
 }
 console.log(min(0, 10));
 console.log(min(0, -10));
@@ -32,18 +31,22 @@ function countChar (string, char) {
   return count;
 }
 console.log(countChar("Billy Bob", "l"));
+
 // Задание со звездочкой
 
 function isEven (N) {
   if (N < 0) {
     N = -N; // Это исправление
   }
-  if (N == 0 || N == 1) {
+  if (typeof N === typeof "") {
+    return "Введена строка";
+  }
+  if (N === 0 || N === 1) {
     return  !N;
   } else {
-      return isEven (N - 2);
-    }
+    return isEven (N - 2);
+  }
 }
-console.log(isEven(50));
+console.log(isEven("Привет"));
 console.log(isEven(75));
 console.log(isEven(-1));
